@@ -24,6 +24,7 @@ public class Config extends BaseConfig {
         Arrays.stream(EntityType.values())
                 .filter(EntityType::isAlive)
                 .filter(x -> x != EntityType.ENDER_DRAGON)
+                .filter(x -> x != EntityType.ARMOR_STAND)
                 .forEach(x -> {
                     entityType2SpawnAmountMap.put(x, 0);
                     entityType2SpawnFrequencyMap.put(x, 1200);
